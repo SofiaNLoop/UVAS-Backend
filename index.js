@@ -9,7 +9,9 @@ connect_DB();
 app.use(express.json()); // read json body
 
 
-app.use('/api/newuser', require('./Routes/Users')); // create new user, visualizer
+// URL API
+app.use('/api/newuser', require('./Routes/Users')); // Create new user, visualizer
+app.use('/api/login', require('./Routes/UserLogin')); // Login
 
 app.listen(3000, () => {
     console.log("App running in: http://127.0.0.1:3000")
